@@ -1,3 +1,6 @@
+from random import randint
+
+
 def new_gladiator(health, rage, damage_low, damage_high):
     '''input -> dictionary
     Returns a dictionary representing the gladiator
@@ -9,3 +12,25 @@ def new_gladiator(health, rage, damage_low, damage_high):
         'highest damage': damage_high
     }
     return gladiator
+
+
+def attack(attacker, defender):
+    '''Attacker(gladiator) strikes  defender(other gladiator)
+    with normal hit or critical hit, and defender reacts accordingly'''
+    hit = randint(attacker['lowest damage'], attacker['highest damage'])
+
+    # randomly generates a number between 1 and 99
+    probability = randint(1, 99)
+
+    if probability <= attacker['rage']:  # if a critical hit
+        health = defender['health'] - (2 * hit)
+        # makes sure health does not drop below 0
+        defender['health'] = max(health, 0)
+        attacker['rage'] = 0
+    else:
+        health = defender['health'] - hit
+        # makes sure health does not drop below 0
+        defender['health'] = max(health, 0)
+        rage = attacker['rage'] + 15
+        # makes sure rage does not go over 100
+        attacker['rage'] = min(rage, 100)
