@@ -100,3 +100,15 @@ def test_heal():
     heal(Bob_gladiator)
 
     assert Bob_gladiator['health'] == 100
+
+
+def test_is_dead():
+    #test if a gladiator is undead
+    random_gladiator = {
+        'health': 0,
+        'rage': 50,
+        'lowest damage': 23,
+        'highest damage': 23
+    }
+
+    assert is_dead(random_gladiator) == True
