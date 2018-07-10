@@ -42,7 +42,12 @@ def heal(gladiator):
     #make sure gladiator can heal
     elif gladiator['rage'] < 10:
         return None
-    #gladiator uses the power of rage to heal
+    #gladiator uses the Power of Rage! to heal
     else:
         gladiator['rage'] = gladiator['rage'] - 10
         gladiator['health'] = gladiator['health'] + 5
+
+
+def is_dead(gladiator):
+    if gladiator['health'] == 0:
+        return True
