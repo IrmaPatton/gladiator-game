@@ -86,3 +86,17 @@ def heal():
     heal(Bob_gladiator)
 
     assert Bob_gladiator['health'] == 1
+
+
+def heal():
+    #tests if 105 HP is turned to 100 HP
+    Bob_gladiator = {
+        'health': 105,
+        'rage': 0,
+        'lowest damage': 13,
+        'highest damage': 13
+    }
+
+    heal(Bob_gladiator)
+
+    assert Bob_gladiator['health'] == 100
