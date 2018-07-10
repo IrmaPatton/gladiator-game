@@ -103,7 +103,7 @@ def test_heal():
 
 
 def test_is_dead():
-    #test if a gladiator is undead
+    #test if a gladiator is dead
     random_gladiator = {
         'health': 0,
         'rage': 50,
@@ -112,3 +112,15 @@ def test_is_dead():
     }
 
     assert is_dead(random_gladiator) == True
+
+
+def test_is_dead():
+    #test if a gladiator is alive
+    random_gladiator = {
+        'health': 100,
+        'rage': 50,
+        'lowest damage': 23,
+        'highest damage': 23
+    }
+
+    assert is_dead(random_gladiator) == False
