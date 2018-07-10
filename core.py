@@ -18,10 +18,8 @@ def attack(attacker, defender):
     '''Attacker(gladiator) strikes  defender(other gladiator)
     with normal hit or critical hit, and defender reacts accordingly'''
     hit = randint(attacker['lowest damage'], attacker['highest damage'])
-
     # randomly generates a number between 1 and 99
     probability = randint(1, 99)
-
     if probability <= attacker['rage']:  # if a critical hit
         health = defender['health'] - (2 * hit)
         # makes sure health does not drop below 0
@@ -34,3 +32,13 @@ def attack(attacker, defender):
         rage = attacker['rage'] + 15
         # makes sure rage does not go over 100
         attacker['rage'] = min(rage, 100)
+
+
+def heal(gladiator):
+    if gladiator['health'] > 100:
+        return None
+    elif gladiator['rage'] < 10:
+        return None
+    else:
+        gladiator['rage'] = gladiator['rage'] - 10
+        gladiator['health'] = gladiator['health'] + 5
