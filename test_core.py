@@ -59,7 +59,7 @@ def test_attack():
     assert Bob_gladiator['rage'] == 0
 
 
-def heal():
+def test_heal():
     #tests if gladiator can heal normally
     Bob_gladiator = {
         'health': 1,
@@ -74,7 +74,7 @@ def heal():
     assert Bob_gladiator['rage'] == 0
 
 
-def heal():
+def test_heal():
     #test when gladiator can't heal
     Bob_gladiator = {
         'health': 1,
@@ -88,7 +88,7 @@ def heal():
     assert Bob_gladiator['health'] == 1
 
 
-def heal():
+def test_heal():
     #tests if 105 HP is turned to 100 HP
     Bob_gladiator = {
         'health': 105,
