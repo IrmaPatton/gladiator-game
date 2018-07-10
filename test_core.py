@@ -15,3 +15,24 @@ def test_new_gladiator():
         'lowest damage': 0,
         'highest damage': 0
     }
+
+
+def test_attack():
+    #to test if normal hit is good
+    random_gladiator = {
+        'health': 100,
+        'rage': 0,
+        'lowest damage': 23,
+        'highest damage': 23
+    }
+    Bob_gladiator = {
+        'health': 100,
+        'rage': 0,
+        'lowest damage': 13,
+        'highest damage': 13
+    }
+
+    attack(Bob_gladiator, random_gladiator)
+
+    assert random_gladiator['health'] == 87
+    assert Bob_gladiator['rage'] == 15
