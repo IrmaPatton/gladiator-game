@@ -36,3 +36,23 @@ def test_attack():
 
     assert random_gladiator['health'] == 87
     assert Bob_gladiator['rage'] == 15
+
+
+def test_attack():
+    random_gladiator = {
+        'health': 100,
+        'rage': 0,
+        'lowest damage': 23,
+        'highest damage': 23
+    }
+    Bob_gladiator = {
+        'health': 100,
+        'rage': 99,
+        'lowest damage': 13,
+        'highest damage': 13
+    }
+
+    attack(Bob_gladiator, random_gladiator)
+
+    assert random_gladiator['health'] == 74
+    assert Bob_gladiator['rage'] == 0
