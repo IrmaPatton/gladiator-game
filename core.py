@@ -37,8 +37,7 @@ def attack(attacker, defender):
 def heal(gladiator):
     #make sure gladiator's health stays less then 100
     if gladiator['health'] > 100:
-        HP = gladiator['health']
-        HP = min(HP, 100)
+        gladiator['health'] = min(gladiator['health'], 100)
     #make sure gladiator can heal
     elif gladiator['rage'] < 10:
         return None
