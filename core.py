@@ -51,3 +51,5 @@ def heal(gladiator):
 def is_dead(gladiator):
     if gladiator['health'] == 0:
         return True
+    else:
+        return False
