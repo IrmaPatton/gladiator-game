@@ -16,3 +16,10 @@ def make_player_1():
 def make_player_2():
     Player2 = new_gladiator(100, 10, randint(10, 20), randint(21, 40))
     return Player2
+
+
+def main():
+
+
+if __name__ == '__main__':
+    main()
