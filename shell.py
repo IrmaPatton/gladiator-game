@@ -42,12 +42,22 @@ Actions: A - attack
                   Player1['highest damage']))
     #does those actions
     action_input = input('What will Blood Bath do? ')
-    while True:
-        if action_input == 'A':
-            attack(Player1, Player2)
-            print('HP = {} Rage = {}'.format(Player1['health'],
-                                             Player1['rage']))
-            break
+    if action_input == 'A':
+        attack(Player1, Player2)
+        print('HP = {} Rage = {}'.format(Player1['health'], Player1['rage']))
+    elif action_input == 'H':
+        heal(Player1)
+        print('Blood Bath screamed in fury!')
+        print('HP = {}'.format(Player1['health']))
+    elif action_input == 'P':
+        print('i not done yest')
+    elif action_input == 'Q':
+        print('Blood Bath throws down his weapon and rage quits.')
+    else:
+        print('''Actions: Type A to  attack
+         Type H to heal
+         Type P to pass turn
+         Type Q to wimp out''')
 
 
 def main():
