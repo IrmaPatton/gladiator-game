@@ -59,11 +59,12 @@ Actions: A - attack
         print('Blood Bath throws down his weapon and rage quits.')
         exit()
     else:
-        print('''Actions: Type A to  attack
-         Type Y to build rage in unhealthy way
-         Type H to heal
-         Type P to pass turn
-         Type Q to wimp out''')
+        while True:
+            print('''Actions: Type A to  attack
+             Type Y to build rage in unhealthy way
+             Type H to heal
+             Type P to pass turn
+             Type Q to wimp out''')
 
 
 def player2_turn(Player2, Player1):
@@ -99,11 +100,12 @@ Actions: A - attack
         print('Crazy Wolf snaps at Blood Bath and rage quits.')
         exit()
     else:
-        print('''Actions: Type A to  attack
-         Type Y to build rage in unhealthy way
-         Type H to heal
-         Type P to pass turn
-         Type Q to wimp out''')
+        while True:
+            print('''Actions: Type A to  attack
+             Type Y to build rage in unhealthy way
+             Type H to heal
+             Type P to pass turn
+             Type Q to wimp out''')
 
 
 def main():
