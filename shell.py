@@ -26,6 +26,9 @@ def ready_set_go():
 Ready...Set... BATTLE!!!!''')
 
 
+#make function to input, checks and returns input
+
+
 def player1_turn(Player1, Player2):
     #show player and stats and actions
     print('''
@@ -58,13 +61,13 @@ Actions: A - attack
     elif action_input == 'Q':
         print('Blood Bath throws down his weapon and rage quits.')
         exit()
-    else:
-        while True:
-            print('''Actions: Type A to  attack
-             Type Y to build rage in unhealthy way
-             Type H to heal
-             Type P to pass turn
-             Type Q to wimp out''')
+
+
+#Actions: Type A to  attack
+#         Type Y to build rage in unhealthy way
+#         Type H to heal
+#         Type P to pass turn
+#         Type Q to wimp out
 
 
 def player2_turn(Player2, Player1):
@@ -99,13 +102,6 @@ Actions: A - attack
     elif action_input == 'Q':
         print('Crazy Wolf snaps at Blood Bath and rage quits.')
         exit()
-    else:
-        while True:
-            print('''Actions: Type A to  attack
-             Type Y to build rage in unhealthy way
-             Type H to heal
-             Type P to pass turn
-             Type Q to wimp out''')
 
 
 def main():
