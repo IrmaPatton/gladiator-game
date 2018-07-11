@@ -27,6 +27,8 @@ Ready...Set... BATTLE!!!!''')
 
 
 #make function to input, checks and returns input
+def input_action():
+    here
 
 
 def player1_turn(Player1, Player2):
