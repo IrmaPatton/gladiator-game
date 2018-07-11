@@ -56,7 +56,8 @@ def heal(gladiator):
 
 def is_dead(gladiator):
     '''dictionary -> bool
-    Checks gladiator's health and if they are dead returns True or False'''
+    Checks gladiator's health and if they are dead returns True,
+    if they are alive returns False'''
 
     if gladiator['health'] == 0:
         return True
