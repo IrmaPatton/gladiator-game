@@ -3,8 +3,9 @@ from random import randint
 
 def new_gladiator(health, rage, damage_low, damage_high):
     '''input -> dictionary
-    Returns a dictionary representing the gladiator
-    with the provided values.'''
+    Returns a dictionary representing the gladiator with 
+    the provided values: health, rage, lowest damage, and highest damage'''
+
     gladiator = {
         'health': health,
         'rage': rage,
@@ -15,8 +16,10 @@ def new_gladiator(health, rage, damage_low, damage_high):
 
 
 def attack(attacker, defender):
-    '''Attacker(gladiator) strikes  defender(other gladiator)
-    with normal hit or critical hit, and defender reacts accordingly'''
+    '''dictionary -> None
+    Attacker(gladiator) strikes  defender(other gladiator)
+    with normal hit or critical hit, and gladiators reacts accordingly'''
+
     hit = randint(attacker['lowest damage'], attacker['highest damage'])
     # randomly generates a number between 1 and 99
     probability = randint(1, 99)
@@ -35,6 +38,9 @@ def attack(attacker, defender):
 
 
 def heal(gladiator):
+    '''dictionary -> bool or None
+    Makes gladiator use rage to heal 5 HP'''
+
     #make sure gladiator's health stays less then 100
     if gladiator['health'] > 100:
         gladiator['health'] = min(gladiator['health'], 100)
@@ -48,6 +54,9 @@ def heal(gladiator):
 
 
 def is_dead(gladiator):
+    '''dictionary -> bool
+    Checks gladiator's health and if they are dead returns True or False'''
+
     if gladiator['health'] == 0:
         return True
     else:
