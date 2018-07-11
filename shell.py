@@ -18,6 +18,23 @@ def make_player_2():
     return Player2
 
 
+def ready_set_go():
+    print('''
+
+Ready...Set... BATTLE!!!!''')
+
+
+def battle_time(Player1, Player2):
+    #show players and stats and actions
+    print('''
+
+Gladiator: Blood Bath
+Stats: -HP {}
+       -Rage {}
+       -Damage {} - {}'''.format(Player1['health'], Player1['rage'], 
+       Player1['damage_low'], Player1['damage_high'])
+
+
 def main():
 
 
