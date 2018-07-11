@@ -54,17 +54,19 @@ Actions: A - attack
         print('Blood Bath screamed in fury!')
         print('HP = {}'.format(Player1['health']))
     elif action_input == 'P':
-        print('i not done yest')
+        return None
     elif action_input == 'Q':
         print('Blood Bath throws down his weapon and rage quits.')
+        exit()
     else:
         print('''Actions: Type A to  attack
+         Type Y to build rage in unhealthy way
          Type H to heal
          Type P to pass turn
          Type Q to wimp out''')
 
 
-def player2_turn(Player1, Player2):
+def player2_turn(Player2, Player1):
     #show player and stats and actions
     print('''
 
@@ -85,18 +87,20 @@ Actions: A - attack
         attack(Player2, Player1)
         print('HP = {} Rage = {}'.format(Player2['health'], Player2['rage']))
     elif action_input == 'Y':
-        attack(Player1, Player1)
-        print('HP = {} Rage = {}'.format(Player1['health'], Player1['rage']))
+        attack(Player2, Player2)
+        print('HP = {} Rage = {}'.format(Player2['health'], Player2['rage']))
     elif action_input == 'H':
         heal(Player2)
         print('Crazy Wolf snarled in fury!')
         print('HP = {}'.format(Player2['health']))
     elif action_input == 'P':
-        print('i not done yest')
+        return None
     elif action_input == 'Q':
         print('Crazy Wolf snaps at Blood Bath and rage quits.')
+        exit()
     else:
         print('''Actions: Type A to  attack
+         Type Y to build rage in unhealthy way
          Type H to heal
          Type P to pass turn
          Type Q to wimp out''')
@@ -107,7 +111,18 @@ def main():
     Player1 = make_player_1()
     Player2 = make_player_2()
     ready_set_go()
-    player1_turn(Player1, Player2)
+    while True:
+        if is_dead(Player2) == True:
+            print("Blood Bath took a bath in Crazy Wolf's blood, and laughed.")
+            break
+        elif is_dead(Player1) == True:
+            print(
+                "Crazy Wolf howled in victory and started eating Blood Bath's face."
+            )
+            break
+        else:
+            player1_turn(Player1, Player2)
+            player2_turn(Player2, Player1)
 
 
 if __name__ == '__main__':
