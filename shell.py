@@ -73,6 +73,7 @@ Stats: -HP {}
        -Rage {}
        -Damage {} - {}
 Actions: A - attack
+         Y - attack youself
          H - heal
          P - pass turn
          Q - quit'''
@@ -83,6 +84,9 @@ Actions: A - attack
     if action_input == 'A':
         attack(Player2, Player1)
         print('HP = {} Rage = {}'.format(Player2['health'], Player2['rage']))
+    elif action_input == 'Y':
+        attack(Player1, Player1)
+        print('HP = {} Rage = {}'.format(Player1['health'], Player1['rage']))
     elif action_input == 'H':
         heal(Player2)
         print('Crazy Wolf snarled in fury!')
