@@ -28,6 +28,7 @@ def attack(attacker, defender):
         # makes sure health does not drop below 0
         defender['health'] = max(health, 0)
         attacker['rage'] = 0
+        print('Critical hit!')
     else:
         health = defender['health'] - hit
         # makes sure health does not drop below 0
