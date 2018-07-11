@@ -42,7 +42,7 @@ def heal(gladiator):
     Makes gladiator use rage to heal 5 HP'''
 
     #make sure gladiator's health stays less then 100
-    if gladiator['health'] > 100:
+    if gladiator['health'] >= 100:
         gladiator['health'] = min(gladiator['health'], 100)
     #make sure gladiator can heal
     elif gladiator['rage'] < 10:
