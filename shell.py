@@ -123,17 +123,16 @@ def main():
     Player2 = make_player_2()
     ready_set_go()
     while True:
+        if is_dead(Player1) == True:
+            #i think the new statements is boring compared
+            print("Crazy Wolf has the victory, the crowd chant his name")
+            break
+        player1_turn(Player1, Player2)
         if is_dead(Player2) == True:
             #had to tone down the wining statements to something... less edgy
             print("Blood Bath has the victory,the crowd chants his name.")
             break
-        elif is_dead(Player1) == True:
-            #i think the new statements is boring compared
-            print("Crazy Wolf has the victory, the crowd chant his name")
-            break
-        else:
-            player1_turn(Player1, Player2)
-            player2_turn(Player2, Player1)
+        player2_turn(Player2, Player1)
 
 
 if __name__ == '__main__':
