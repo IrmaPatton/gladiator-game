@@ -26,9 +26,27 @@ def ready_set_go():
 Ready...Set... BATTLE!!!!''')
 
 
-#make function to input, checks and returns input
 def input_action():
-    here
+    #function to input, checks it and returns input
+    while True:
+        action = input('What will he do? ')
+        if action == 'A':
+            return action
+        elif action == 'Y':
+            return action
+        elif action == 'H':
+            return action
+        elif action == 'P':
+            return action
+        elif action == 'Q':
+            return action
+        else:
+            print('''
+Actions: Type A to  attack
+         Type Y to build rage in unhealthy way
+         Type H to heal
+         Type P to pass turn
+         Type Q to wimp out''')
 
 
 def player1_turn(Player1, Player2):
@@ -47,7 +65,7 @@ Actions: A - attack
           .format(Player1['health'], Player1['rage'], Player1['lowest damage'],
                   Player1['highest damage']))
     #does those actions
-    action_input = input('What will Blood Bath do? ')
+    action_input = input_action()
     if action_input == 'A':
         attack(Player1, Player2)
         print('HP = {} Rage = {}'.format(Player1['health'], Player1['rage']))
@@ -63,13 +81,6 @@ Actions: A - attack
     elif action_input == 'Q':
         print('Blood Bath throws down his weapon and rage quits.')
         exit()
-
-
-#Actions: Type A to  attack
-#         Type Y to build rage in unhealthy way
-#         Type H to heal
-#         Type P to pass turn
-#         Type Q to wimp out
 
 
 def player2_turn(Player2, Player1):
@@ -88,7 +99,7 @@ Actions: A - attack
           .format(Player2['health'], Player2['rage'], Player2['lowest damage'],
                   Player2['highest damage']))
     #does those actions
-    action_input = input('What will Crazy Wolf do? ')
+    action_input = input_action()
     if action_input == 'A':
         attack(Player2, Player1)
         print('HP = {} Rage = {}'.format(Player2['health'], Player2['rage']))
@@ -117,7 +128,7 @@ def main():
             print("Blood Bath has the victory,the crowd chants his name.")
             break
         elif is_dead(Player1) == True:
-            #i think this new statement is boring compared
+            #i think the new statements is boring compared
             print("Crazy Wolf has the victory, the crowd chant his name")
             break
         else:
