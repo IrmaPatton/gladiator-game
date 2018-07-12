@@ -113,12 +113,12 @@ def main():
     ready_set_go()
     while True:
         if is_dead(Player2) == True:
-            print("Blood Bath took a bath in Crazy Wolf's blood, and laughed.")
+            #had to tone down the wining statements to something... less edgy
+            print("Blood Bath has the victory,the crowd chants his name.")
             break
         elif is_dead(Player1) == True:
-            print(
-                "Crazy Wolf howled in victory and started eating Blood Bath's face."
-            )
+            #i think this new statement is boring compared
+            print("Crazy Wolf has the victory, the crowd chant his name")
             break
         else:
             player1_turn(Player1, Player2)
