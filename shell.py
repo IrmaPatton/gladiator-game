@@ -5,7 +5,13 @@ from random import randint
 def greet_rules():
     print('''                   Welcome to Gladiators: Rage Beasts 
 It's a two player game, but if you want to play by yourself. I can't stop you
-                   May the power of rage guide you''')
+                   May the power of rage guide you
+                                Scene: 
+Blood Bath enters the dusty arena. The sun is bright, so he shades his eyes.
+The crowd roars, hungry to see some action. Crazy Wolf is working the crowd
+into a frenzy. He sniffs the air and turns licking his lips. Blood Bath runs
+forward with a warcry that could scare death. Crazy Wolf howls and does too.'''
+          )
 
 
 def make_player_1():
