@@ -49,6 +49,17 @@ Actions: Type A to  attack
          Type Q to wimp out''')
 
 
+def Y_check_P1(Player1):
+    #checks if Blood Bath killed himself
+    if is_dead(Player1) == True:
+        print("""Blood Bath's unhealthy rage seeking was his end.
+Crazy Wolf bows his head in admiration of Blood Bath's commitment to be a Rage Beast."""
+              )
+        exit()
+    else:
+        return None
+
+
 def player1_turn(Player1, Player2):
     #show player and stats and actions
     print('''
@@ -71,6 +82,7 @@ Actions: A - attack
         print('HP = {} Rage = {}'.format(Player1['health'], Player1['rage']))
     elif action_input == 'Y':
         attack(Player1, Player1)
+        Y_check_P1(Player1)
         print('HP = {} Rage = {}'.format(Player1['health'], Player1['rage']))
     elif action_input == 'H':
         heal(Player1)
@@ -81,6 +93,15 @@ Actions: A - attack
     elif action_input == 'Q':
         print('Blood Bath throws down his weapon and rage quits.')
         exit()
+
+
+def Y_check_P2(Player2):
+    if is_dead(Player2) == True:
+        print('''Crazy Wolf's unhealthy rage seeking was his downfall.
+Blood Bath bows his head in admiration of Blood Bath's commitment to be a Rage Wolf.'''
+              )
+    else:
+        return None
 
 
 def player2_turn(Player2, Player1):
@@ -105,6 +126,7 @@ Actions: A - attack
         print('HP = {} Rage = {}'.format(Player2['health'], Player2['rage']))
     elif action_input == 'Y':
         attack(Player2, Player2)
+        Y_check_P2(Player2)
         print('HP = {} Rage = {}'.format(Player2['health'], Player2['rage']))
     elif action_input == 'H':
         heal(Player2)
