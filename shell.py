@@ -96,6 +96,7 @@ Actions: A - attack
 
 
 def Y_check_P2(Player2):
+    #checks if Crazy Wolf killed himself
     if is_dead(Player2) == True:
         print('''Crazy Wolf's unhealthy rage seeking was his downfall.
 Blood Bath bows his head in admiration of Blood Bath's commitment to be a Rage Wolf.'''
